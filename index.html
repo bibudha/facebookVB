@@ -53,7 +53,8 @@
                 FB.getLoginStatus(function(response) {
                                   if (response.status == 'connected') {
                                   alert('logged in');
-                                  alert(response.authResponse.accessToken);
+                                  alert(response.authResponse.userID);
+								  alert(response.authResponse.accessToken);
                                   } else {
                                   alert('not logged in');
                                   }
@@ -68,11 +69,11 @@
                        } else {
                        var data = document.getElementById('data');
 					   fdata=response.data;
-					   alert(response.authResponse.userID);
-					   alert(response.authResponse.accessToken);
+					    
 					   console.log("fdata: "+fdata);
                        response.data.forEach(function(item) {
-	                                              var d = document.createElement('div');
+	                                            var d = document.createElement('div');
+												 alert(item.id);
                                              d.innerHTML = "<img src="+item.picture+"/>"+item.name;
                                              data.appendChild(d);
                                              });
