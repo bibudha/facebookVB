@@ -53,6 +53,7 @@
                 FB.getLoginStatus(function(response) {
                                   if (response.status == 'connected') {
                                   alert('logged in');
+                                  alert(response.authResponse.accessToken);
                                   } else {
                                   alert('not logged in');
                                   }
