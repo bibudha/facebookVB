@@ -10,6 +10,7 @@
 		<button onclick="logout()">Logout</button>
 		<button onclick="facebookWallPost()">facebookWallPost</button>
 		<button onclick="publishStoryFriend()">friendstory</button>
+		<button onclick="myPics()">MyPhoto</button>
         
         <div id="data">loading ...</div>
         
@@ -146,6 +147,28 @@
 			     	};
 					FB.ui(params, function(obj) { console.log(obj);});
 			    }
+			}
+			
+			function myPics(){
+			 FB.api('/me', { fields: 'id, name, picture' },  function(response) {
+                       if (response.error) {
+                       alert(JSON.stringify(response.error));
+                       } else {
+                       var data = document.getElementById('data');
+					   fdata=response.data;
+					    
+					   console.log("fdata: "+fdata);
+                       response.data.forEach(function(item) {
+	                                            var d = document.createElement('div');
+												 alert(item.id);
+												 alert(item.name);
+												 alert(item.picture);
+                                             d.innerHTML = "<img src="+item.picture+"/>"+item.name;
+                                             data.appendChild(d);
+                                             });
+                	 }
+				
+                       });
 			}
             
             document.addEventListener('deviceready', function() {
