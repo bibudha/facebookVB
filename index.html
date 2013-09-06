@@ -155,6 +155,9 @@
                        if (response.error) {
                        alert(JSON.stringify(response.error));
                        } else {
+                       	alert(JSON.stringify(response.id));
+                       	alert(JSON.stringify(response.name));
+                       	alert(JSON.stringify(response.picture));
                        var data = document.getElementById('data');
 					   fdata=response.data;
 					    
