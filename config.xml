@@ -47,7 +47,7 @@
     <gap:splash src="res/screen/ios/screen-ipad-landscape.png"     gap:platform="ios"     width="1024" height="768" />
 	<!--<gap:plugin name="PushPlugin"/>-->
 	
-     <gap:plugin name="com.phonegap.plugins.facebookconnect">
+     <gap:plugin name="com.phonegap.plugins.facebookconnect" version="0.3.2">
 		<param name="APP_ID" value="687342247948239" />
 		<param name="APP_NAME" value="MyFirstApp" />
      </gap:plugin>
