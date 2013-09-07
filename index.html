@@ -102,7 +102,7 @@
             function login() {
                 FB.login(
                          function(response) {
-                         alert(response.session);
+                         console.log(response.session);
 						 if (response.session) {
                          	
                          alert('logged in');
