@@ -103,8 +103,9 @@
                 FB.login(
                          function(response) {
                          console.log(response.session);
-						 if (response.session) {
+						 if (response.status == 'connected') {
                          	
+                       alert(response.authResponse.userID);
                          alert('logged in');
 						 
                          } else {
