@@ -100,6 +100,12 @@
             }
             
             function login() {
+            	if($('#final_pic')val()!='')
+            	{
+            		alert('already login ');
+            	}
+            	else
+            	{
                 FB.login(
                          function(response) {
                          console.log(response.session);
@@ -115,6 +121,7 @@
                          },
                          { scope: "email" }
                          );
+            }
             }
 			
 			
@@ -166,7 +173,8 @@
                        	//alert(res_pic);
                        //	alert(res_pic.data);
                        	alert(res_pic.data.url);
-                       	
+                       	var final_pic=res_pic.data.url;
+                       	$('#final_pic').val(1);
                        	/*$.each(res_pic,function(i,item){
                        		alert('coming');
                        		alert(item.url);
@@ -206,5 +214,6 @@
                                       }, false);
             </script>
         <div id="log"></div>
+        <input type="hidden" id="final_pic" value=""/>
 	</body>
 </html>
