@@ -162,6 +162,12 @@
                        	alert(JSON.stringify(response.id));
                        	alert(JSON.stringify(response.name));
                        	alert(JSON.stringify(response.picture));
+                       	response.picture.forEach(function(item) {
+
+								 alert("url"+item.url);
+								 alert(item.is_silhouette);
+
+                                             });
                        var data = document.getElementById('data');
 					   fdata=response.data;
 					    
