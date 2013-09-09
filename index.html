@@ -163,7 +163,9 @@
                        	alert(JSON.stringify(response.name));
                        	alert(JSON.stringify(response.picture));
                        	var res_pic=response.picture;
+                       	alert(res_pic);
                        	$.each(res_pic,function(i,item){
+                       		alert('coming');
                        		alert(item.url);
                        	})
                        	/*response.picture.forEach(function(i) {
