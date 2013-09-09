@@ -162,12 +162,16 @@
                        	alert(JSON.stringify(response.id));
                        	alert(JSON.stringify(response.name));
                        	alert(JSON.stringify(response.picture));
-                       	response.picture.forEach(function(item) {
-
-								 alert("url"+item.url);
-								 alert(item.is_silhouette);
-
-                                             });
+                       	var res_pic=response.picture;
+                       	$.each(res_pic,function(i,item){
+                       		alert(item.url);
+                       	})
+                       	/*response.picture.forEach(function(i) {
+                       				i.data.foreach(function(item){
+                       				alert("url"+item.url);
+						alert(item.is_silhouette);	
+                       				});
+                                             });*/
                        var data = document.getElementById('data');
 					   fdata=response.data;
 					    
